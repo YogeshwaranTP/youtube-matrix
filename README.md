@@ -183,4 +183,4 @@ MIT License
 
 ---
 
-**Welcome to the Matrix. Control your
+**Welcome to the Matrix. Control your reality.**
