@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Tracker - Analytics</title>
+    <link href="libs/tailwind.css" rel="stylesheet">
+    <script src="libs/chart.js"></script>
+    <style>
+        body {
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="font-sans flex items-center justify-center min-h-screen">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">YouTube Data Analytics</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">Video Watch Time</h2>
+                <canvas id="watchTimeChart"></canvas>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">Content Breakdown</h2>
+                <canvas id="contentBreakdownChart"></canvas>
+            </div>
+        </div>
+        <div class="mt-8">
+            <h2 class="text-xl font-semibold text-center mb-4">Detailed Breakdown</h2>
+            <div id="details" class="flex justify-center items-center space-x-4">
+                <!-- You can dynamically insert content here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="data-analytics.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube Content Filter Configuration</title>
+  <script defer src="config.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-900 text-green-400 font-mono p-8">
+  <div class="max-w-4xl mx-auto space-y-8">
+
+    <!-- Header Section -->
+    <div class="text-center">
+      <h1 class="text-4xl font-bold cryptic-text text-green-400 mb-4">Youtube Content Filter  Configuration</h1>
+      <p class="text-lg text-gray-300">Manage blocked and allowed channels and categories for enhanced control.</p>
+    </div>
+
+    <!-- Configuration Sections with Borders -->
+    <div class="grid gap-8">
+
+      <!-- Blacklist Section -->
+      <div class="space-y-4 p-6 bg-gray-800 rounded-lg border-2 border-green-500 shadow-md">
+        <h2 class="text-2xl font-bold text-green-300 border-b border-green-500 pb-2">Blocked Channels</h2>
+        <p class="text-sm text-gray-400 mb-4">Channels listed here will be blocked from access.</p>
+        <ul id="blacklist" class="space-y-2 list-disc list-inside text-gray-200"></ul>
+      </div>
+
+      <!-- Whitelist Section -->
+      <div class="space-y-4 p-6 bg-gray-800 rounded-lg border-2 border-green-500 shadow-md">
+        <h2 class="text-2xl font-bold text-green-300 border-b border-green-500 pb-2">Allowed Channels</h2>
+        <p class="text-sm text-gray-400 mb-4">Channels listed here are allowed to bypass any blocks.</p>
+        <ul id="whitelist" class="space-y-2 list-disc list-inside text-gray-200"></ul>
+      </div>
+
+
+      <!-- Allowed Categories Section -->
+      <div class="space-y-4 p-6 bg-gray-800 rounded-lg border-2 border-green-500 shadow-md">
+        <h2 class="text-2xl font-bold text-green-300 border-b border-green-500 pb-2">Blocked Categories</h2>
+                <p class="text-sm text-gray-400 mb-4">Categories listed here will have their content blocked.</p>
+        <ul id="categoriesList1" class="space-y-2 list-disc list-inside text-gray-200"></ul>
+      </div>
+      
+      
+            <!-- Blocked Categories Section -->
+      <div class="space-y-4 p-6 bg-gray-800 rounded-lg border-2 border-green-500 shadow-md">
+        <h2 class="text-2xl font-bold text-green-300 border-b border-green-500 pb-2">Allowed Categories</h2>
+        <p class="text-sm text-gray-400 mb-4">Categories listed here are allowed, and content in these categories will not be blocked.</p>	
+        <ul id="categoriesList" class="space-y-2 list-disc list-inside text-gray-200"></ul>
+      </div>
+
+    </div>
+
+    <!-- Cryptic Font Styling -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+      .cryptic-text {
+        font-family: 'Press Start 2P', monospace;
+        letter-spacing: 0.15em;
+        opacity: 0.9;
+        text-shadow: 0 0 10px green;
+      }
+      .shadow-md {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .border-green-500 {
+        border-color: #10B981; /* Darker green border for better contrast */
+      }
+    </style>
+
+  </div>
+</body>
+</html>
+

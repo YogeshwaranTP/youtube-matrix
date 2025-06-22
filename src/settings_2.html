@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1, h2 {
+            margin: 0 0 20px;
+            font-weight: 600;
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        h2 {
+            font-size: 20px;
+            color: #555;
+        }
+        .section {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #444;
+            font-weight: 500;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 6px 9px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .whitelist-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .whitelist-item span {
+            color: #333;
+        }
+        .whitelist-item button {
+            background-color: #dc3545;
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+        
+        .whitelist-item button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>SETTINGS</h1>
+        
+        <div class="section">
+            <h2>Manage Whitelist</h2>
+            <label>
+                <h3>Whitelist Channel Name:</h3>
+                <input type="text" id="whitelistInput" placeholder="Enter channel name">
+            </label>
+            <button id="addToWhitelist">Add to Whitelist</button>
+        </div>
+        <div class="section">
+            <label for="delayInput">Set Delay Time (10-7200 seconds):</label>
+            <input type="number" id="delayInput" min="10" max="7200" placeholder="Enter delay time">
+            <button id="setDelayButton">Set Delay</button>
+        </div>
+         <div class="section" id="pending">
+            <h2>Pending</h2>
+            <!-- Pending items will be displayed here -->
+        </div>
+           <div id="timeSpent">Loading time spent...</div>
+        <div class="section" id="whitelist">
+            <h2>Whitelist</h2>
+            <!-- Whitelist will be dynamically populated here -->
+        </div>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>
+

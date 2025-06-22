@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Tracker",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "webNavigation",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open Settings Page"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "settings.html",
+        "blocked.html",
+        "data-analytics.html",
+        "data-analytics.js",
+        "data-analytics.css",
+        "libs/chart.js",  
+        "libs/tailwind.css"  
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["contentScript.js", "content-timer.js"],
+      "run_at": "document_end"
+    }
+  ],
+  
+  
+  "content_security_policy": {
+  "extension_pages": "script-src 'self'; object-src 'self';"
+},
+  "options_page": "config.html"
+ 
+  }
+

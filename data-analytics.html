@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Tracker - Analytics</title>
+    <link href="libs/tailwind.css" rel="stylesheet">
+    <script src="libs/chart.js"></script>
+    <style>
+        body {
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="font-sans flex items-center justify-center min-h-screen">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">YouTube Data Analytics</h1>
+        
+        <!-- Date Navigation -->
+        <div class="flex justify-center items-center mb-8">
+            <button id="prevDate" class="px-4 py-2 bg-gray-700 text-white rounded-l"><</button>
+            <span id="currentDate" class="text-2xl mx-4">2024-11-15</span>
+            <button id="nextDate" class="px-4 py-2 bg-gray-700 text-white rounded-r">></button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Video Watch Time Bar Chart -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">Video Watch Time</h2>
+                <canvas id="watchTimeChart"></canvas>
+            </div>
+
+            <!-- Content Breakdown Pie Chart -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">Content Breakdown</h2>
+                <canvas id="contentBreakdownChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Line Graph for Detailed Breakdown -->
+        <div class="mt-8">
+            <h2 class="text-xl font-semibold text-center mb-4">Detailed Breakdown</h2>
+            <div id="details" class="flex justify-center items-center space-x-4"></div>
+            <canvas id="lineGraph"></canvas>
+        </div>
+
+        <!-- Total Time Display -->
+        <div class="mt-8">
+            <div id="totalTime"></div>
+        </div>
+
+   
+    </div>
+
+    <script src="data-analytics.js"></script>
+</body>
+</html>
+
