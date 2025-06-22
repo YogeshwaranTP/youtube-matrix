@@ -3,7 +3,21 @@
 **Escape the Matrix. Take control of your YouTube experience.**
 
 ---
+## Screenshots
 
+### Matrix Description (Intro)
+![Matrix Description](src/img/1.png)
+
+### Settings Menu
+![Settings Menu](src/img/2.png)
+
+### Configuration Page
+![Configuration Page](src/img/3.png)
+
+### Block Page
+![Block Page](src/img/4.png)
+
+---
 ## Overview
 
 This Chrome extension allows you to filter, block, and analyze your YouTube usage in a highly customizable, Matrix-inspired interface. You can blacklist or whitelist channels, restrict content by categories, activate a "Nuclear Mode" to block everything except your chosen whitelist, and review your usage analytics.
